@@ -4,10 +4,17 @@ class Index
 {
     function __construct()
     {
+        echo "we are in index controller<br>";
     }
 
-    function sayHello(){
-        echo "we are in sayHello method";
+    function sayhello($name = "", $family = "", $age="")
+    {
+        echo "Hello Mr. " . $name . " " . $family . " ". $age . "<br>";
+    }
+
+    function go()
+    {
+        echo "hi ali";
     }
 }
 
