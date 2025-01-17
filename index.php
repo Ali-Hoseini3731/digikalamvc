@@ -1,20 +1,50 @@
 <?php
 
-$url = explode("/", $_GET["url"]);
+class App
+{
+    public $controller = "index";
+    public $method = "index";
+    public $params = [];
 
-print_r($url);
+    function __construct()
+    {
+        if (isset($_GET["url"])) {
+            $url = $this->parse_url($_GET["url"]);
 
-$controller = $url[0];
-unset($url[0]);
+            $this->controller = $url[0];
+            unset($url[0]);
 
-$method = $url[1];
-unset($url[1]);
+            if (isset($url[1])) {
+                $this->method = $url[1];
+                unset($url[1]);
+            }
 
-$params = array_values($url);
-print_r($params);
+            $this->params = array_values($url);
+        }
 
-require "controllers/" . $controller . ".php";
-$object = new $controller;
-call_user_func_array([$object, $method], $params);
+        echo "<br>";
+        print_r($this->params);
+        echo "<br>";
+
+        $controllerUrl = "controllers/" . $this->controller . ".php";
+        if (file_exists($controllerUrl)) {
+            require $controllerUrl;
+            $object = new $this->controller;
+            if (method_exists($object, $this->method)) {
+                call_user_func_array([$object, $this->method], $this->params);
+            }
+        }
+
+
+    }
+
+    function parse_url($url)
+    {
+        filter_var($url, FILTER_SANITIZE_URL);
+        return explode("/", $url);
+    }
+}
+
+new App;
 
 ?>
