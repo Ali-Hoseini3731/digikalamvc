@@ -1,192 +1,761 @@
+<style>
+    #main {
+        max-width: 1200px;
+        margin: auto;
+        overflow: auto;
+    }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>فروشگاه اینترنتی دیجی کالا</title>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="<?= URL ?>css/digikala.css" />
-    <link rel="stylesheet" href="<?= URL ?>css/flipTimer.css"/>
+    #banner-top {
+        width: 100%;
+        height: 140px;
+        margin: 10px 0;
+    }
 
-</head>
+    #banner-top > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        box-shadow: 0 4px 5px #aaa;
+        -webkit-box-shadow: 0 4px 5px #aaa;
+        -moz-box-shadow: 0 4px 5px #aaa;
+    }
 
-<body>
-<header style="background-color: #fff;">
-    <div id="header">
-        <div id="header-left">
-            <img src="<?= URL ?>image/header/logo.png" alt="عکسی وجود  ندارد"/>
-        </div>
-        <div id="header-right">
-            <div id="header-right-top">
-                <span id="header-right-top-lock"></span>
-                <a href="#" style="text-decoration: none; margin-right: 7px" class="yekan fontSm">فروشگاه اینترنتی دیجی
-                    کالا وارد شوید.</a>
-                <span id="header-right-top-login"></span>
-                <a href="#" style="text-decoration:none; margin-right: 7px;" class="yekan fontSm">ثبت نام کنید</a>
-            </div>
-            <div id="header-right-bottom">
-                <div id="basket">
-                    <div id="basket-left"></div>
-                    <div id="basket-right">
-                        <span class="yekan fontSm" style="color: #fff;line-height: 35px"> سبد خرید</span>
-                        <span id="basket-right-circle">0</span>
-                    </div>
-                </div>
-                <div id="search-header">
-                    <input type="text" placeholder="محصول  ِدسته یا برند مورد نظرتان را سرچ کنید..."
-                           class="yekan fontSm"/>
-                    <a href="#" id="search-header-button"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+    #sidebar-right {
+        width: 290px;
+        float: right;
+    }
 
-<nav id="nav-top">
-    <div id="menu-top">
-        <ul>
-            <li data-time="1"><a class="yekan">کالای دیجیتال<span></span></a>
-                <ul>
-                    <li data-time="11"><a class="yekan fontSm ">موبایل</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>گوشی موبایل</li>
-                                    <li><a>apple</a></li>
-                                    <li><a>nokia</a></li>
-                                    <li><a>samsung</a></li>
-                                    <li><a>lenovo</a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>image/nav/mobile.png" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-time="12"><a class="yekan fontSm ">تبلت و کتابخوان</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>تبلت</li>
-                                    <li><a>apple</a></li>
-                                    <li><a>nokia</a></li>
-                                    <li><a>samsung</a></li>
-                                    <li><a>lenovo</a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>image/nav/tablet.png" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-time="13"><a class="yekan fontSm ">لب تا‍پ</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>لب تاب</li>
-                                    <li><a>apple</a></li>
-                                    <li><a>nokia</a></li>
-                                    <li><a>samsung</a></li>
-                                    <li><a>lenovo</a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>image/nav/laptab.jpg" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li data-time="2"><a class="yekan">لوازم خانگی<span></span></a>
-                <ul>
-                    <li data-time="21"><a class="yekan fontSm ">صوتی تصویری</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>تلویزیون</li>
-                                    <li><a>کمتر از 32 اینچ</a></li>
-                                    <li><a>41 اینچ</a></li>
-                                    <li><a>54 اینچ</a></li>
-                                    <li><a>از 54 به بالا </a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>image/nav/tv.png" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-time="22"><a class="yekan fontSm ">لوازم خانگی برفی</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>یخچال</li>
-                                    <li><a>sony</a></li>
-                                    <li><a>elctro-still</a></li>
-                                    <li><a>snova</a></li>
-                                    <li><a>samsung</a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li data-time="3"><a class="yekan">وزش و سلامتی<span></span></a>
-                <ul>
-                    <li data-time="31"><a class="yekan fontSm ">ورزشی</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>فوتبال</li>
-                                    <li><a>لباس ورزشی</a></li>
-                                    <li><a>لوازم ورزشی</a></li>
-                                    <li><a>اطاعات ورزشی</a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>image/nav/sport.jpg" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-time="32"><a class="yekan fontSm ">زیبایی</a>
-                        <div class="top-menu-3">
-                            <div class="top-menu-3-col">
-                                <ul>
-                                    <li>لوازم ارایشی</li>
-                                    <li><a>عطر اتکن</a></li>
-                                    <li><a>کرم</a></li>
-                                    <li><a>رژلب</a></li>
-                                    <li><a>موتیک</a></li>
-                                </ul>
-                            </div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col"></div>
-                            <div class="top-menu-3-col">
-                                <img class="top-menu-3-col-img" src="<?= URL ?>image/nav/beauty.jpg" alt="no picture"/>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li data-time="4"><a class="yekan">فرهنگ و هنر<span></span></a></li>
+    #sidebar-right > #top-img {
+        border-radius: 3px;
+        box-shadow: 0 2px 3px #aaa;
+    }
 
+    #sidebar-right > ul.first-ul {
+        margin: 0;
+        padding: 0;
+    }
 
-        </ul>
-    </div>
-</nav>
+    #sidebar-right > ul.first-ul > li {
+        list-style: none;
+        margin-top: 12px;
+    }
+
+    #sidebar-right > ul.first-ul > li > a {
+        display: block;
+        width: 100%;
+        height: 160px;
+        position: relative;
+    }
+
+    #sidebar-right > ul.first-ul > li > a::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 160px;
+        background-color: rgba(0, 0, 0, .3);
+        position: absolute;
+        border-radius: 4px;
+    }
+
+    #sidebar-right > ul.first-ul > li > a > img {
+        display: block;
+        width: 100%;
+        height: 160px;
+        border-radius: 4px;
+        box-shadow: 0 4px 5px #aaa;;
+    }
+
+    #sidebar-right > ul.first-ul > li > a > span {
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-color: rgba(0, 0, 0, .3);
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 50px;
+        text-align: center;
+        transition: all 1s ease;
+    }
+
+    #sidebar-right > ul.first-ul > li:hover > a > span {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    #sidebar-right > ul.first-ul > li > a > span > img {
+        margin-top: 25px;
+    }
+
+    #sidebar-right > ul.second-ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    #sidebar-right > ul.second-ul > li {
+        list-style: none;
+        margin-top: 10px;
+        width: 290px;
+        height: 260px;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    }
+
+    #sidebar-right > ul.second-ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sidebar-right > ul.second-ul > li > a > img {
+        display: block;
+        width: 290px;
+        height: 260px;
+    }
+
+    #sidebar-right-lastNews {
+        margin-top: 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    #sidebar-right-lastNews > h3 {
+        margin: 0;
+        background-color: #d3d4d7;
+        height: 40px;
+        padding-right: 10px;
+        line-height: 40px;
+        color: #3B75BF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    }
+
+    #sidebar-right-lastNews .three-ul {
+        margin: 10px 0;
+        padding: 0;
+        overflow: auto;
+    }
+
+    #sidebar-right-lastNews > .three-ul > li {
+        width: 100%;
+        list-style: none;
+        margin-top: 10px;
+        overflow: auto;
+    }
+
+    #sidebar-right-lastNews > .three-ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    #sidebar-right-lastNews .right-col {
+        width: 70px;
+        float: right;
+        text-align: center;
+        margin: 5px 10px 0 0;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    #sidebar-right-lastNews .right-col > img {
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+
+    #sidebar-right-lastNews .left-col {
+        width: 190px;
+        float: left;
+        padding: 0 5px;
+    }
+
+    #sidebar-right-lastNews .left-col > p {
+        margin: 0;
+        color: #0f220c;;
+    }
+
+    #sidebar-right-lastNews .left-col > p.second {
+        font-size: 9.1pt;
+        color: #b0b1b3;
+    }
+
+    #sidebar-right-brands {
+        margin: 10px 0;
+        overflow: auto;
+    }
+
+    #sidebar-right-brands a {
+        display: block;
+        width: 135px;
+        height: 90px;
+        margin-bottom: 5px;
+        background-color: #fff;
+        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+        float: right;
+    }
+
+    #sidebar-right-brands a:nth-child(even) {
+        float: left;
+    }
+
+    #sidebar-right-brands a > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*--------------------------content-----------------*/
+    #content {
+        width: 890px;
+        float: left;
+    }
+
+    #slider {
+        height: 310px;
+        background-color: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    }
+
+    #slider-img {
+        height: 260px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #slider-img #prev {
+        display: block;
+        width: 19px;
+        height: 33px;
+        background: url("<?= URL ?>/image/main/slider/arrow_slider.png") no-repeat;
+        background-position: 0 -33px;
+        position: absolute;
+        right: 12px;
+        top: 125px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #slider-img #next {
+        display: block;
+        width: 19px;
+        height: 33px;
+        background: url("<?= URL ?>/image/main/slider/arrow_slider.png") no-repeat;
+        position: absolute;
+        left: 12px;
+        top: 125px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #slider-img a.item {
+        display: none;
+    }
+
+    #slider-img img {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    #slider-navigator {
+        height: 50px;
+        background-color: rgba(0, 0, 0, .8);
+    }
+
+    #slider-navigator ul {
+        margin: 0;
+        padding: 0;
+        float: right;
+    }
+
+    #slider-navigator ul li {
+        list-style: none;
+        width: 178px;
+        height: 50px;
+        float: right;
+    }
+
+    #slider-navigator ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 49px;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #slider #slider-navigator ul .active a {
+        color: #000;
+        background-color: #fff;
+    }
+
+    #slider #slider-navigator ul .active a::after {
+        content: "";
+        position: absolute;
+        top: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 12.5px 13px 12.5px;
+        border-color: transparent transparent #ffffff;
+    }
+
+    /*--------------------------services-feather ---------------------*/
+    #services-feather {
+        height: 76px;
+        background-color: #fff;
+        margin: 7px 0;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 1px 3px 4px rgba(0, 0, 0, .19);
+    }
+
+    #services-feather ul {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #services-feather ul li {
+        list-style: none;
+        height: 100%;
+        width: 178px;
+        float: right;
+    }
+
+    #services-feather ul li a {
+        display: block;
+        font-size: 10pt;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+
+    #services-feather ul li a i {
+        display: block;
+        background: url("<?= URL ?>/image/slices.png") no-repeat;
+        float: right;
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    #services-feather i.item1 {
+        width: 24px;
+        height: 24px;
+        background-position: -210px -473px;
+    }
+
+    #services-feather i.item2 {
+        width: 24px;
+        height: 24px;
+        background-position: -263px -473px;
+    }
+
+    #services-feather i.item3 {
+        width: 24px;
+        height: 24px;
+        background-position: -158px -473px;
+    }
+
+    #services-feather i.item4 {
+        width: 34px;
+        height: 24px;
+        background-position: -316px -473px;
+    }
+
+    #services-feather i.item5 {
+        width: 24px;
+        height: 24px;
+        background-position: -102px -473px;
+    }
+
+    /*----------------------------slider2-----------------*/
+    #slider2 {
+        height: 304px;
+        background-color: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 1px 3px 4px rgba(0, 0, 0, .19);
+        position: relative;
+    }
+
+    #content #slider2 .flipTimer, .flipTimer div {
+        direction: ltr !important;
+    }
+
+    #content #slider2 .flipTimer {
+        position: absolute;
+        transform: scale(.3);
+        top: 200px;
+        right: -145px;
+
+    }
+
+    #slider2 #slider2-finish {
+        display: none;
+        width: 705px;
+        height: 304px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .05);
+        text-align: center;
+        color: #ff0000;
+        font-size: 35pt;
+        line-height: 280px;
+        z-index: 3;
+    }
+
+    #slider2-content {
+        width: 705px;
+        height: 100%;
+        float: right;
+        background: url("<?= URL ?>/image/main/slider2/slider2_bg.jpg") no-repeat;
+    }
+
+    #slider2-content a {
+        display: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .slider2-content-right {
+        width: 400px;
+        height: 100%;
+        float: right;
+    }
+
+    .slider2-content-right .title {
+        color: #f00;
+        margin-top: 45px;
+        margin-right: 30px;
+        font-size: 16pt;
+    }
+
+    .slider2-content-right .price {
+        width: 230px;
+        height: 35px;
+        margin-right: 30px;
+    }
+
+    .slider2-content-right .price-old {
+        position: relative;
+        width: 75px;
+        height: 100%;
+        background-color: #bbb;
+        float: right;
+        text-align: center;
+        color: #fff;
+        font-size: 16pt;
+    }
+
+    .slider2-content-right .price-old::before {
+        position: absolute;
+        right: 0;
+        top: 18px;
+        transform: rotate(-25deg);
+        content: '';
+        width: 73px;
+        height: 0;
+        border-top: 2px solid #222;
+    }
+
+    .slider2-content-right .price-old::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 10px;
+        left: -12px;
+        border-style: solid;
+        border-width: 8px 12px 8px 0;
+        border-color: transparent #bbb transparent;
+        z-index: 2;
+    }
+
+    .slider2-content-right .price-new {
+        position: relative;
+        width: 153px;
+        height: 100%;
+        background-color: #ff0000;
+        float: right;
+        border-right: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        font-size: 14pt;
+    }
+
+    .slider2-content-right .price-new::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 8px;
+        right: -1px;
+        border-style: solid;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #fff transparent;
+    }
+
+    .slider2-content-right .title2 {
+        float: right;
+        width: 100%;
+        margin: 7px 0 0 0;
+    }
+
+    .slider2-content-left {
+        width: 305px;
+        height: 100%;
+        float: left;
+    }
+
+    .slider2-content-left p {
+        text-align: center;
+        font-size: 15pt;
+    }
+
+    .slider2-content-left img {
+        width: 225px;
+        height: 225px;
+        margin-right: 55px;
+    }
+
+    #slider2-navigator {
+        width: 184px;
+        height: 100%;
+        border-right: 1px solid #ddd;
+        float: left;
+        background-color: #ccc;
+    }
+
+    #slider2-navigator ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #slider2-navigator ul li {
+        list-style: none;
+        height: 38px;
+        width: 100%;
+        position: relative;
+    }
+
+    #slider2-navigator ul li a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 10pt;
+        line-height: 35px;
+        cursor: pointer;
+    }
+
+    #slider2-navigator ul li.active2 a {
+        background-color: #ed0e1b;
+        color: #fff;
+    }
+
+    #slider2-navigator ul li.active2 a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -17px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 19px 0 19px 17px;
+        border-color: transparent transparent transparent #ed0e19;
+    }
+
+    /*-------------------------slider-scroll-------------------*/
+    .sliderScroll {
+        width: 890px;
+        height: 310px;
+        background-color: #fff;
+        box-shadow: 1px 3px 4px rgba(0, 0, 0, .19);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+
+    .sliderScroll h3.first {
+        background-color: #cfd0f7;
+        margin: 0;
+        height: 35px;
+        font-weight: normal;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+
+    .sliderScroll h3.tow {
+        background-color: #2397b4;
+        margin: 0;
+        height: 35px;
+        font-weight: normal;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+
+    .sliderScroll h3.three {
+        background-color: #ab49b4;
+        margin: 0;
+        height: 35px;
+        font-weight: normal;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+
+    .sliderScroll h3.four {
+        background-color: #b49b9a;
+        margin: 0;
+        height: 35px;
+        font-weight: normal;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+
+    .sliderScroll .sliderScroll-content {
+        width: 100%;
+        height: 270px;
+    }
+
+    .sliderScroll-prev, .sliderScroll-next {
+        width: 55px;
+        height: 100%;
+        float: right;
+    }
+
+    .sliderScroll-prev span {
+        display: block;
+        width: 15px;
+        height: 25px;
+        background: url("<?= URL ?>/image/slices.png") no-repeat;
+        background-position: -852px -687px;
+        position: relative;
+        top: 120px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .sliderScroll-next span {
+        display: block;
+        width: 15px;
+        height: 25px;
+        background: url("<?= URL ?>/image/slices.png") no-repeat;
+        background-position: -813px -687px;
+        position: relative;
+        top: 120px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .sliderScroll-main {
+        width: 780px;
+        height: 100%;
+        float: right;
+        overflow: hidden;
+    }
+
+    .sliderScroll-main ul {
+        margin: 0;
+        padding: 0;
+        width: 780px;
+        height: 100%;
+    }
+
+    .sliderScroll-main ul li {
+        list-style: none;
+        width: 195px;
+        height: 100%;
+        float: right;
+        transition: all 100ms linear;
+    }
+
+    .sliderScroll-main ul li:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, .19);
+
+    }
+
+    .sliderScroll-main ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .sliderScroll-main ul li a img:first-child {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sliderScroll-main ul li a p {
+        text-align: center;
+        margin: 1px;
+    }
+
+    .sliderScroll-main ul li a .pName {
+        font-size: 10pt;
+        color: #a10000;
+    }
+
+    .sliderScroll-main ul li a .pPrice {
+        color: #0db40c;
+        font-size: 13pt;
+    }
+
+    /*--------------------------direct-access-----------*/
+
+    #direct-access {
+        width: 890px;
+        margin-top: 15px;
+        overflow: auto;
+    }
+
+    #direct-access a {
+        display: block;
+        width: 290px;
+        height: 190px;
+        background-color: #FFFFFF;
+        box-shadow: 1px 3px 4px rgba(0, 0, 0, .19);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 10px;
+        float: right;
+        margin-left: 10px;
+    }
+
+    #direct-access .direct2 {
+        width: 590px;
+        margin-left: 0;
+    }
+
+    #direct-access .direct4 {
+        margin-left: 0;
+    }
+
+    #direct-access .direc6 {
+        width: 590px;
+    }
+
+    #direct-access .direct7 {
+        margin-left: 0;
+    }
+
+</style>
 
 <div id="main">
     <div id="banner-top">
@@ -232,7 +801,8 @@
                 <li>
                     <a href="">
                         <div class="right-col">
-                            <img src="<?= URL ?>image/main/sidebar/SanDisk_Headquarters_Milpitas-60x60.jpg" alt="no picture"/>
+                            <img src="<?= URL ?>image/main/sidebar/SanDisk_Headquarters_Milpitas-60x60.jpg"
+                                 alt="no picture"/>
                         </div>
                         <div class="left-col">
                             <p class="yekan fontSm">کارت حافظه های 256 گیگابایتی سن دیسک معرفی شدند.</p>
@@ -892,106 +1462,3 @@
 
 </div>
 
-<footer id="footer">
-    <div id="footer-top">
-        <div class="main">
-            <span class="yekan">هفت روز هفته، 24 ساعته در خدمت  شما هستیم</span>
-            <ul>
-                <li>
-                    <a class="yekan">
-                        a.h.computer73@gmail.com
-                        <i class="email"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="yekan">
-                        سوالات متداول
-                        <i class="qustion"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="yekan">
-                        09105572418
-                        <i class="phone"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="footer-bottom">
-        <div class="main">
-            <div class="footer-bottom-right">
-                <ul>
-                    <li>
-                        <a class="yekan title">راهنمای خرید از دیجی کالا</a>
-                    </li>
-                    <li>
-                        <a class="yekan">ثبت سفارش</a>
-                    </li>
-                    <li>
-                        <a class="yekan">رویه های ارسال سفارش</a>
-                    </li>
-                    <li>
-                        <a class="yekan">روش های پرداخت</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a class="yekan title">راهنمای خرید از دیجی کالا</a>
-                    </li>
-                    <li>
-                        <a class="yekan">ثبت سفارش</a>
-                    </li>
-                    <li>
-                        <a class="yekan">رویه های ارسال سفارش</a>
-                    </li>
-                    <li>
-                        <a class="yekan">روش های پرداخت</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-bottom-left">
-                <p>اولین شخصی که مطلع می شود . باشید!</p>
-                <div class="yourEmail">
-                    <input class="yekan" type="text" placeholder="آدرس ایمیل خود را وارد کنید">
-                    <span class="yekan">تایید ایمیل</span>
-                </div>
-                <div class="icon">
-                    <a class="first">
-                        <img src="<?= URL ?>image/footer/ios_app_bg.png" alt="no-picture"/>
-                    </a>
-                    <a class="first">
-                        <img src="<?= URL ?>image/footer/android_app_bg.png" alt="no-picture"/>
-                    </a>
-                    <a class="second">
-                        <i class="one"></i>
-                    </a>
-                    <a class="second">
-                        <i class="tow"></i>
-                    </a>
-                    <a class="second">
-                        <i class="three"></i>
-                    </a>
-                    <a class="second">
-                        <i class="four"></i>
-                    </a>
-                    <a class="second">
-                        <i class="five"></i>
-                    </a>
-                    <a class="second">
-                        <i class="six"></i>
-                    </a>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</footer>
-
-<script language="JavaScript" src="<?= URL ?>js/jquery-3.0.0.min.js"></script>
-<script language="JavaScript" src="<?= URL ?>js/jquery.flipTimer.js"></script>
-<script language="JavaScript" src="<?= URL ?>js/digikala.js"></script>
-
-</body>
-</html>
