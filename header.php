@@ -3,7 +3,7 @@
 <head>
     <title>فروشگاه اینترنتی دیجی کالا</title>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="<?= URL ?>css/digikala.css" />
+<!--    <link rel="stylesheet" href="--><?php //= URL ?><!--css/digikala.css" />-->
     <link rel="stylesheet" href="<?= URL ?>css/flipTimer.css"/>
 
 </head>
@@ -293,6 +293,12 @@
 
     .active-menu > a {
         color: #f00;
+    }
+
+    #main {
+        max-width: 1200px;
+        margin: auto;
+        overflow: auto;
     }
 </style>
 

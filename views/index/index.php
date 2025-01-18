@@ -1,9 +1,4 @@
 <style>
-    #main {
-        max-width: 1200px;
-        margin: auto;
-        overflow: auto;
-    }
 
     #banner-top {
         width: 100%;
