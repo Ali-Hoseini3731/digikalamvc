@@ -36,7 +36,8 @@ class App
 
     function parse_url($url)
     {
-        filter_var($url, FILTER_SANITIZE_URL);
+        $url = filter_var($url, FILTER_SANITIZE_URL);
+        $url = rtrim($url, "/");
         return explode("/", $url);
     }
 }
