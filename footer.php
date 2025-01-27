@@ -301,7 +301,13 @@
 </footer>
 
 <script language="JavaScript" src="<?= URL ?>js/jquery-3.0.0.min.js"></script>
+<script language="JavaScript" src="<?= URL ?>js/jquery.elevatezoom.js"></script>
 <script language="JavaScript" src="<?= URL ?>js/jquery.flipTimer.js"></script>
+<script language="JavaScript" src="<?= URL ?>js/scroll/jquery.mCustomScrollbar.js"></script>
+<script language="JavaScript" src="<?= URL ?>js/scroll/jquery.mousewheel.js"></script>
+<script language="JavaScript" src="<?= URL ?>3d/jsc3d.js"></script>
+<script language="JavaScript" src="<?= URL ?>3d/jsc3d.webgl.js"></script>
+<script language="JavaScript" src="<?= URL ?>3d/jsc3d.touch.js"></script>
 <script language="JavaScript" src="<?= URL ?>js/digikala.js"></script>
 
 </body>
