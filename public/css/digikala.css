@@ -2249,11 +2249,7 @@ body {
 }
 
 /*------------------------------------------------product page------------*/
-#main {
-    max-width: 1200px;
-    margin: auto;
-    overflow: auto;
-}
+
 
 #main #offer {
     width: 100%;

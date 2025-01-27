@@ -3,8 +3,10 @@
 <head>
     <title>فروشگاه اینترنتی دیجی کالا</title>
     <meta charset="UTF-8"/>
+
 <!--    <link rel="stylesheet" href="--><?php //= URL ?><!--css/digikala.css" />-->
     <link rel="stylesheet" href="<?= URL ?>css/flipTimer.css"/>
+    <link rel="stylesheet" href="<?= URL ?>js/scroll/jquery.mCustomScrollbar.css"/>
 
 </head>
 
