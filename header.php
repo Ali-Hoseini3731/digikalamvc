@@ -4,9 +4,25 @@
     <title>فروشگاه اینترنتی دیجی کالا</title>
     <meta charset="UTF-8"/>
 
-<!--    <link rel="stylesheet" href="--><?php //= URL ?><!--css/digikala.css" />-->
     <link rel="stylesheet" href="<?= URL ?>css/flipTimer.css"/>
     <link rel="stylesheet" href="<?= URL ?>js/scroll/jquery.mCustomScrollbar.css"/>
+
+
+
+    <script language="JavaScript" src="<?= URL ?>js/jquery-3.0.0.min.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/jquery.elevatezoom.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/jquery.flipTimer.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/scroll/jquery.mCustomScrollbar.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/scroll/jquery.mousewheel.js"></script>
+    <script language="JavaScript" src="<?= URL ?>3d/jsc3d.js"></script>
+    <script language="JavaScript" src="<?= URL ?>3d/jsc3d.webgl.js"></script>
+    <script language="JavaScript" src="<?= URL ?>3d/jsc3d.touch.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/bootstrap.min.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/bootstrap-select.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/city.js"></script>
+    <script language="JavaScript" src="<?= URL ?>js/mohale.js"></script>
+
+
 
 </head>
 
@@ -302,6 +318,60 @@
         margin: auto;
         overflow: auto;
     }
+
+    /*-------------btn------------*/
+    .btn-green {
+        display: block;
+        width: 160px;
+        height: 35px;
+        background-color: #20a70a;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+        color: #fff;
+        font-size: 11pt;
+        cursor: pointer;
+    }
+
+    .btn-blue {
+        display: block;
+        width: 160px;
+        height: 35px;
+        background-color: #2f2cf5;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+        color: #fff;
+        font-size: 11pt;
+        cursor: pointer;
+    }
+
+    .btn-gray {
+        display: block;
+        width: 160px;
+        height: 35px;
+        background-color: #a2a2a2;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+        color: #fff;
+        font-size: 11pt;
+        cursor: pointer;
+    }
+    .btn-green {
+        display: block;
+        width: 160px;
+        height: 35px;
+        background-color: #20a70a;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 35px;
+        color: #fff;
+        font-size: 11pt;
+        cursor: pointer;
+    }
+
+
 </style>
 
 <header style="background-color: #fff;">
